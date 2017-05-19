@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="njf-Fs-AAv">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Create Game-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ios_pickup_games" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="WYK-Og-Qq1">
+                                <rect key="frame" x="0.0" y="64" width="667" height="205"/>
+                            </mapView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a message.." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kDc-rd-UOX">
+                                <rect key="frame" x="20" y="313" width="627" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pCn-JR-ghd">
+                                <rect key="frame" x="215" y="277" width="237" height="29"/>
+                                <segments>
+                                    <segment title="🏀"/>
+                                    <segment title="🏈"/>
+                                    <segment title="⚽️"/>
+                                    <segment title="⚾️"/>
+                                    <segment title="🎾"/>
+                                    <segment title="🏐"/>
+                                    <segment title="🏓"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="WYK-Og-Qq1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="2eM-IE-P5Z"/>
+                            <constraint firstItem="kDc-rd-UOX" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="BPa-BM-98t"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WYK-Og-Qq1" secondAttribute="bottom" constant="106" id="MFk-U2-rxZ"/>
+                            <constraint firstItem="pCn-JR-ghd" firstAttribute="top" secondItem="WYK-Og-Qq1" secondAttribute="bottom" constant="8" id="ZCn-uB-Hc0"/>
+                            <constraint firstItem="kDc-rd-UOX" firstAttribute="top" secondItem="pCn-JR-ghd" secondAttribute="bottom" constant="8" id="aWS-L9-GNR"/>
+                            <constraint firstAttribute="trailing" secondItem="WYK-Og-Qq1" secondAttribute="trailing" id="i5n-Qq-Ieq"/>
+                            <constraint firstItem="kDc-rd-UOX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ptY-KP-2iS"/>
+                            <constraint firstItem="pCn-JR-ghd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="toW-p6-8fK"/>
+                            <constraint firstItem="WYK-Og-Qq1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="z1q-Us-I9W"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Create Game" id="RtH-rT-OdU">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="P6W-XP-O6G"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Wlq-Ir-DLG"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1074.4000000000001" y="136.28185907046478"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ngu-4S-rcC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="njf-Fs-AAv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gtt-OT-Hle">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Kcy-RU-mV7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oXG-VL-908" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="252" y="137"/>
+        </scene>
+    </scenes>
+</document>
